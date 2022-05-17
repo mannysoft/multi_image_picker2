@@ -93,7 +93,7 @@ class Asset {
     ServicesBinding.instance.defaultBinaryMessenger
         .setMessageHandler(_thumbChannel, (ByteData? message) async {
       completer.complete(message);
-      ServicesBinding.instance!.defaultBinaryMessenger
+      ServicesBinding.instance.defaultBinaryMessenger
           .setMessageHandler(_thumbChannel, null);
       return message;
     });
@@ -119,10 +119,10 @@ class Asset {
     }
 
     Completer completer = new Completer<ByteData>();
-    ServicesBinding.instance!.defaultBinaryMessenger
+    ServicesBinding.instance.defaultBinaryMessenger
         .setMessageHandler(_originalChannel, (ByteData? message) async {
       completer.complete(message);
-      ServicesBinding.instance!.defaultBinaryMessenger
+      ServicesBinding.instance.defaultBinaryMessenger
           .setMessageHandler(_originalChannel, null);
       return message;
     });
