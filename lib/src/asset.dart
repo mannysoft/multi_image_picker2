@@ -90,7 +90,7 @@ class Asset {
     }
 
     Completer completer = new Completer<ByteData>();
-    ServicesBinding.instance!.defaultBinaryMessenger
+    ServicesBinding.instance.defaultBinaryMessenger
         .setMessageHandler(_thumbChannel, (ByteData? message) async {
       completer.complete(message);
       ServicesBinding.instance!.defaultBinaryMessenger
